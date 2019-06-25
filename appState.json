@@ -1,0 +1,117 @@
+{
+  "EDITOR_STATE": {
+    "allProjectFiles": {
+      "23dc018e-2e06-43be-bad6-c72447a49421": {
+        "id": "23dc018e-2e06-43be-bad6-c72447a49421",
+        "parent": null,
+        "name": "MyFirstProject",
+        "type": "DIRECTORY",
+        "isDirectory": true,
+        "children": [
+          "1092ea60-ae10-4eec-8491-cfe5028a3277"
+        ],
+        "isRemovable": false,
+        "filePath": "MyFirstProject"
+      },
+      "1092ea60-ae10-4eec-8491-cfe5028a3277": {
+        "id": "1092ea60-ae10-4eec-8491-cfe5028a3277",
+        "parent": "23dc018e-2e06-43be-bad6-c72447a49421",
+        "name": "lambda.js",
+        "type": "JS_LAMBDA",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "MyFirstProject/lambda.js",
+        "code": "exports.handler = function(event, context, callback) {\n    \n    callback(null, {\"message\": \"Successfully executed\"});\n}",
+        "config": {
+          "runtime": "nodejs8.10",
+          "handler": "handler",
+          "timeout": 60,
+          "memory": 128,
+          "layers": []
+        },
+        "triggers": [
+          {
+            "resourceName": "apigusEast1AS2Receiveras2Receiverget",
+            "config": {}
+          }
+        ],
+        "testCases": {
+          "a2b79fc4-9fb1-4772-b4c5-763d177a4274": {
+            "id": "a2b79fc4-9fb1-4772-b4c5-763d177a4274",
+            "functionId": "1092ea60-ae10-4eec-8491-cfe5028a3277",
+            "name": "My First Test Case",
+            "event": "{\n    \"key1\": \"value1\",\n    \"key2\": \"value2\",\n    \"key3\": \"value3\"\n}"
+          }
+        }
+      }
+    },
+    "deletedFiles": [],
+    "rootNode": "23dc018e-2e06-43be-bad6-c72447a49421",
+    "openFiles": [
+      "1092ea60-ae10-4eec-8491-cfe5028a3277"
+    ],
+    "currentFileId": "1092ea60-ae10-4eec-8491-cfe5028a3277",
+    "resources": {
+      "apigusEast1AS2Receiveras2Receiverget": {
+        "name": "apigusEast1AS2Receiveras2Receiverget",
+        "type": "API_GATEWAY",
+        "config": {
+          "selectedRegion": "us-east-1",
+          "apiMode": 1,
+          "apiName": "AS2Receiver",
+          "apiId": "ux9hn1gf95",
+          "endpointType": "EDGE",
+          "rootResourceId": "w6qjq96rl9",
+          "existingResources": {
+            "/": "w6qjq96rl9",
+            "/as2-receiver": "wh896s"
+          },
+          "resourceMode": 1,
+          "resourcePath": "/as2-receiver",
+          "resourceName": "as2-receiver",
+          "resourceId": "wh896s",
+          "restMethod": "GET",
+          "proxyIntegration": false,
+          "enableCORS": false,
+          "stageMode": 0,
+          "stageName": "test",
+          "mode": 1
+        }
+      }
+    },
+    "customTemplate": {
+      "dialect": null,
+      "definitions": {}
+    },
+    "envVariables": [
+      {
+        "lambdaId": "all",
+        "varKey": "SIGMA_AWS_ACC_ID",
+        "varValue": null,
+        "shouldPersist": false,
+        "displayOnly": false,
+        "editable": false
+      }
+    ],
+    "packageJSON": {
+      "dependencies": {}
+    }
+  },
+  "PROJECT_META": {
+    "projectName": "MyFirstProject",
+    "projectDescription": "My First Project",
+    "projectVersion": "1.0.0",
+    "projectRegion": "us-east-1",
+    "platform": "AWS",
+    "platformRegions": {},
+    "lastSave": 1561447765293
+  },
+  "VCS_STATE": {
+    "provider": "GitHub",
+    "repo": {
+      "name": "MyFirstProject",
+      "url": "https://github.com/Indunil1992/MyFirstProject"
+    }
+  }
+}
