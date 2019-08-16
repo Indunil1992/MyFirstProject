@@ -22,7 +22,7 @@
         "children": [],
         "isRemovable": true,
         "filePath": "MyFirstProject/lambda.js",
-        "code": "let AWS = require('aws-sdk');\nconst s3 = new AWS.S3();\n\nexports.handler = function (event, context, callback) {\n    s3.listObjects({\n        'Bucket': 'com.sigma.test.263248768798.asankha.us-east-1',\n        'MaxKeys': 10,\n        'Prefix': '1'\n    }).promise()\n        .then(data => {\n            console.log(data);           // successful response\n            /*\n            data = {\n                Contents: [\n                    {\n                       ETag: \"\\\"70ee1738b6b21e2c8a43f3a5ab0eee71\\\"\",\n                       Key: \"example1.jpg\",\n                       LastModified: \"<Date Representation>\",\n                       Owner: {\n                          DisplayName: \"myname\",\n                          ID: \"12345example25102679df27bb0ae12b3f85be6f290b936c4393484be31bebcc\"\n                       },\n                       Size: 11,\n                       StorageClass: \"STANDARD\"\n                    },\n                    // {...}\n                ]\n            }\n            */\n        })\n        .catch(err => {\n            console.log(err, err.stack); // an error occurred\n        });\n\n\n\n\n\n    callback(null, { \"message\": \"Successfully executed\" });\n}",
+        "code": "let AWS = require('aws-sdk');\nconst ses = new AWS.SES();\nconst s3 = new AWS.S3();\n\nexports.handler = function (event, context, callback) {\n    s3.listObjects({\n        'Bucket': 'com.sigma.test.263248768798.asankha.us-east-1',\n        'MaxKeys': 10,\n        'Prefix': '1'\n    }).promise()\n        .then(data => {\n            console.log(data);           // successful response\n            /*\n            data = {\n                Contents: [\n                    {\n                       ETag: \"\\\"70ee1738b6b21e2c8a43f3a5ab0eee71\\\"\",\n                       Key: \"example1.jpg\",\n                       LastModified: \"<Date Representation>\",\n                       Owner: {\n                          DisplayName: \"myname\",\n                          ID: \"12345example25102679df27bb0ae12b3f85be6f290b936c4393484be31bebcc\"\n                       },\n                       Size: 11,\n                       StorageClass: \"STANDARD\"\n                    },\n                    // {...}\n                ]\n            }\n            */\n        })\n        .catch(err => {\n            console.log(err, err.stack); // an error occurred\n        });\n\n    ses.sendEmail({\n        Destination: {\n            ToAddresses: ['achal.rvce@gmail.com'],\n            CcAddresses: [],\n            BccAddresses: []\n        },\n        Message: {\n            Body: {\n                Text: {\n                    Data: ''\n                }\n            },\n            Subject: {\n                Data: 'test'\n            }\n        },\n        Source: 'achal.rvce@gmail.com',\n    }, function (err, data) {\n        if (err) console.log(err, err.stack); // an error occurred\n        else console.log(data);           // successful response\n    });\n\n\n\n\n    callback(null, { \"message\": \"Successfully executed\" });\n}",
         "config": {
           "runtime": "nodejs8.10",
           "handler": "handler",
@@ -88,6 +88,24 @@
             "name": "com.sigma.test.263248768798.asankha.us-east-1"
           }
         }
+      },
+      "ses-achal.rvce@gmail.com": {
+        "name": "ses-achal.rvce@gmail.com",
+        "type": "SES",
+        "config": {
+          "selectedIdentity": "achal.rvce@gmail.com",
+          "projectRegion": "us-east-1",
+          "params": {
+            "to": "achal.rvce@gmail.com",
+            "cc": "",
+            "bcc": "",
+            "subject": "test",
+            "body": {
+              "text": "",
+              "html": ""
+            }
+          }
+        }
       }
     },
     "customTemplate": {
@@ -123,7 +141,7 @@
     "projectRegion": "us-east-1",
     "platform": "AWS",
     "platformRegions": {},
-    "lastSave": 1565945138069
+    "lastSave": 1565947653967
   },
   "VCS_STATE": {
     "provider": "GitHub",
