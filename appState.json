@@ -1,21 +1,21 @@
 {
   "EDITOR_STATE": {
     "allProjectFiles": {
-      "23dc018e-2e06-43be-bad6-c72447a49421": {
-        "id": "23dc018e-2e06-43be-bad6-c72447a49421",
+      "f77e35d7-af4f-46e6-8ae5-7829bbf2d7ca": {
+        "id": "f77e35d7-af4f-46e6-8ae5-7829bbf2d7ca",
         "parent": null,
         "name": "MyFirstProject",
         "type": "DIRECTORY",
         "isDirectory": true,
         "children": [
-          "1092ea60-ae10-4eec-8491-cfe5028a3277"
+          "3581dfb8-1bf2-48a2-b9ac-790f5124211a"
         ],
         "isRemovable": false,
         "filePath": "MyFirstProject"
       },
-      "1092ea60-ae10-4eec-8491-cfe5028a3277": {
-        "id": "1092ea60-ae10-4eec-8491-cfe5028a3277",
-        "parent": "23dc018e-2e06-43be-bad6-c72447a49421",
+      "3581dfb8-1bf2-48a2-b9ac-790f5124211a": {
+        "id": "3581dfb8-1bf2-48a2-b9ac-790f5124211a",
+        "parent": "f77e35d7-af4f-46e6-8ae5-7829bbf2d7ca",
         "name": "lambda.js",
         "type": "JS_LAMBDA",
         "isDirectory": false,
@@ -32,14 +32,14 @@
         },
         "triggers": [
           {
-            "resourceName": "apigusEast1AS2Receiveras2Receiverget",
+            "resourceName": "apigusEast1DebugDemoLiveindunilqatstany",
             "config": {}
           }
         ],
         "testCases": {
-          "a2b79fc4-9fb1-4772-b4c5-763d177a4274": {
-            "id": "a2b79fc4-9fb1-4772-b4c5-763d177a4274",
-            "functionId": "1092ea60-ae10-4eec-8491-cfe5028a3277",
+          "a2dae0b0-a0dd-41ff-b5f3-b8569a50bbcc": {
+            "id": "a2dae0b0-a0dd-41ff-b5f3-b8569a50bbcc",
+            "functionId": "3581dfb8-1bf2-48a2-b9ac-790f5124211a",
             "name": "My First Test Case",
             "event": "{\n    \"key1\": \"value1\",\n    \"key2\": \"value2\",\n    \"key3\": \"value3\"\n}"
           }
@@ -47,35 +47,34 @@
       }
     },
     "deletedFiles": [],
-    "rootNode": "23dc018e-2e06-43be-bad6-c72447a49421",
+    "rootNode": "f77e35d7-af4f-46e6-8ae5-7829bbf2d7ca",
     "openFiles": [
-      "1092ea60-ae10-4eec-8491-cfe5028a3277"
+      "3581dfb8-1bf2-48a2-b9ac-790f5124211a"
     ],
-    "currentFileId": "1092ea60-ae10-4eec-8491-cfe5028a3277",
+    "currentFileId": "3581dfb8-1bf2-48a2-b9ac-790f5124211a",
     "resources": {
-      "apigusEast1AS2Receiveras2Receiverget": {
-        "name": "apigusEast1AS2Receiveras2Receiverget",
+      "apigusEast1DebugDemoLiveindunilqatstany": {
+        "name": "apigusEast1DebugDemoLiveindunilqatstany",
         "type": "API_GATEWAY",
         "config": {
           "selectedRegion": "us-east-1",
           "apiMode": 1,
-          "apiName": "AS2Receiver",
-          "apiId": "ux9hn1gf95",
+          "apiName": "DebugDemoLive",
+          "apiId": "591lopb872",
           "endpointType": "EDGE",
-          "rootResourceId": "w6qjq96rl9",
+          "rootResourceId": "zpskfiugvb",
           "existingResources": {
-            "/": "w6qjq96rl9",
-            "/as2-receiver": "wh896s"
+            "/debugdemolive": "ubx91w",
+            "/": "zpskfiugvb"
           },
-          "resourceMode": 1,
-          "resourcePath": "/as2-receiver",
-          "resourceName": "as2-receiver",
-          "resourceId": "wh896s",
-          "restMethod": "GET",
+          "resourceMode": 0,
+          "resourceName": "indunil/qa/tst",
+          "resourcePath": "/indunil/qa/tst",
+          "restMethod": "ANY",
           "proxyIntegration": false,
           "enableCORS": false,
           "stageMode": 0,
-          "stageName": "test",
+          "stageName": "Test",
           "mode": 1
         }
       }
@@ -105,7 +104,7 @@
     "projectRegion": "us-east-1",
     "platform": "AWS",
     "platformRegions": {},
-    "lastSave": 1561447765293
+    "lastSave": 1565943371804
   },
   "VCS_STATE": {
     "provider": "GitHub",
