@@ -1,30 +1,21 @@
 {
   "EDITOR_STATE": {
     "allProjectFiles": {
-      "f77e35d7-af4f-46e6-8ae5-7829bbf2d7ca": {
-        "id": "f77e35d7-af4f-46e6-8ae5-7829bbf2d7ca",
+      "abe54e2b-9c2f-4633-a27b-8d42642d3f16": {
+        "id": "abe54e2b-9c2f-4633-a27b-8d42642d3f16",
         "parent": null,
-        "name": "MyFirstProject",
-        "type": "DIRECTORY",
-        "isDirectory": true,
-        "children": [
-          "3581dfb8-1bf2-48a2-b9ac-790f5124211a"
-        ],
-        "isRemovable": false,
-        "filePath": "MyFirstProject"
-      },
-      "3581dfb8-1bf2-48a2-b9ac-790f5124211a": {
-        "id": "3581dfb8-1bf2-48a2-b9ac-790f5124211a",
-        "parent": "f77e35d7-af4f-46e6-8ae5-7829bbf2d7ca",
-        "name": "lambda.js",
+        "name": "MyFirstProject.js",
         "type": "JS_LAMBDA",
         "isDirectory": false,
         "children": [],
         "isRemovable": true,
-        "filePath": "MyFirstProject/lambda.js",
-        "code": "let AWS = require('aws-sdk');\nconst ses = new AWS.SES();\nconst s3 = new AWS.S3();\n\nexports.handler = function (event, context, callback) {\n    s3.listObjects({\n        'Bucket': 'com.sigma.test.263248768798.asankha.us-east-1',\n        'MaxKeys': 10,\n        'Prefix': '1'\n    }).promise()\n        .then(data => {\n            console.log(data);           // successful response\n            /*\n            data = {\n                Contents: [\n                    {\n                       ETag: \"\\\"70ee1738b6b21e2c8a43f3a5ab0eee71\\\"\",\n                       Key: \"example1.jpg\",\n                       LastModified: \"<Date Representation>\",\n                       Owner: {\n                          DisplayName: \"myname\",\n                          ID: \"12345example25102679df27bb0ae12b3f85be6f290b936c4393484be31bebcc\"\n                       },\n                       Size: 11,\n                       StorageClass: \"STANDARD\"\n                    },\n                    // {...}\n                ]\n            }\n            */\n        })\n        .catch(err => {\n            console.log(err, err.stack); // an error occurred\n        });\n\n    ses.sendEmail({\n        Destination: {\n            ToAddresses: ['achal.rvce@gmail.com'],\n            CcAddresses: [],\n            BccAddresses: []\n        },\n        Message: {\n            Body: {\n                Text: {\n                    Data: ''\n                }\n            },\n            Subject: {\n                Data: 'test'\n            }\n        },\n        Source: 'achal.rvce@gmail.com',\n    }, function (err, data) {\n        if (err) console.log(err, err.stack); // an error occurred\n        else console.log(data);           // successful response\n    });\n\n\n\n\n    callback(null, { \"message\": \"Successfully executed\" });\n}",
+        "filePath": "MyFirstProject.js",
+        "cursor": {
+          "lineNumber": 2,
+          "column": 5
+        },
         "config": {
-          "runtime": "nodejs8.10",
+          "runtime": "nodejs10.x",
           "handler": "handler",
           "timeout": 60,
           "memory": 128,
@@ -32,40 +23,38 @@
         },
         "triggers": [
           {
-            "resourceName": "apigusEast1DebugDemoLiveindunilqatstany",
+            "resourceName": "apigusEast1oshadeeapiuomindunilqatstany",
             "config": {}
           }
         ],
         "testCases": {
-          "a2dae0b0-a0dd-41ff-b5f3-b8569a50bbcc": {
-            "id": "a2dae0b0-a0dd-41ff-b5f3-b8569a50bbcc",
-            "functionId": "3581dfb8-1bf2-48a2-b9ac-790f5124211a",
+          "3f052647-4992-4950-8c0d-d6d2d5484726": {
+            "id": "3f052647-4992-4950-8c0d-d6d2d5484726",
+            "functionId": "abe54e2b-9c2f-4633-a27b-8d42642d3f16",
             "name": "My First Test Case",
             "event": "{\n    \"key1\": \"value1\",\n    \"key2\": \"value2\",\n    \"key3\": \"value3\"\n}"
           }
         }
       }
     },
-    "deletedFiles": [],
-    "rootNode": "f77e35d7-af4f-46e6-8ae5-7829bbf2d7ca",
     "openFiles": [
-      "3581dfb8-1bf2-48a2-b9ac-790f5124211a"
+      "abe54e2b-9c2f-4633-a27b-8d42642d3f16"
     ],
-    "currentFileId": "3581dfb8-1bf2-48a2-b9ac-790f5124211a",
+    "currentFileId": "abe54e2b-9c2f-4633-a27b-8d42642d3f16",
     "resources": {
-      "apigusEast1DebugDemoLiveindunilqatstany": {
-        "name": "apigusEast1DebugDemoLiveindunilqatstany",
+      "apigusEast1oshadeeapiuomindunilqatstany": {
+        "name": "apigusEast1oshadeeapiuomindunilqatstany",
         "type": "API_GATEWAY",
         "config": {
           "selectedRegion": "us-east-1",
           "apiMode": 1,
-          "apiName": "DebugDemoLive",
-          "apiId": "591lopb872",
-          "endpointType": "EDGE",
-          "rootResourceId": "zpskfiugvb",
+          "apiName": "oshadeeapiuom",
+          "apiId": "dcwosrt3mh",
+          "endpointType": "REGIONAL",
+          "rootResourceId": "ia1xzf4ck0",
           "existingResources": {
-            "/debugdemolive": "ubx91w",
-            "/": "zpskfiugvb"
+            "/": "ia1xzf4ck0",
+            "/oshii": "q9j5a1"
           },
           "resourceMode": 0,
           "resourceName": "indunil/qa/tst",
@@ -74,43 +63,14 @@
           "proxyIntegration": false,
           "enableCORS": false,
           "stageMode": 0,
-          "stageName": "Test",
+          "stageName": "test11",
           "mode": 1
-        }
-      },
-      "s3comsigmatest263248768798asankhausEast1": {
-        "name": "s3comsigmatest263248768798asankhausEast1",
-        "type": "S3",
-        "config": {
-          "mode": 1,
-          "bucket": {
-            "region": "us-east-1",
-            "name": "com.sigma.test.263248768798.asankha.us-east-1"
-          }
-        }
-      },
-      "ses-achal.rvce@gmail.com": {
-        "name": "ses-achal.rvce@gmail.com",
-        "type": "SES",
-        "config": {
-          "selectedIdentity": "achal.rvce@gmail.com",
-          "projectRegion": "us-east-1",
-          "params": {
-            "to": "achal.rvce@gmail.com",
-            "cc": "",
-            "bcc": "",
-            "subject": "test",
-            "body": {
-              "text": "",
-              "html": ""
-            }
-          }
         }
       }
     },
     "customTemplate": {
       "dialect": null,
-      "definitions": {}
+      "definitions": null
     },
     "envVariables": [
       {
@@ -123,15 +83,7 @@
       }
     ],
     "packageJSON": {
-      "dependencies": {
-        "aws-sdk": {
-          "name": "aws-sdk",
-          "language": "javascript",
-          "version": "2.176.0",
-          "dev": true,
-          "notRemovable": false
-        }
-      }
+      "dependencies": {}
     }
   },
   "PROJECT_META": {
@@ -140,14 +92,15 @@
     "projectVersion": "1.0.0",
     "projectRegion": "us-east-1",
     "platform": "AWS",
+    "language": "nodejs",
     "platformRegions": {},
-    "lastSave": 1565947680498
+    "lastSave": 1584085220098
   },
   "VCS_STATE": {
     "provider": "GitHub",
     "repo": {
-      "name": "MyFirstProject",
-      "url": "https://github.com/Indunil1992/MyFirstProject"
+      "name": "myfirstproject",
+      "url": "https://github.com/Indunil1992/myfirstproject"
     }
   }
 }
