@@ -1,8 +1,8 @@
 {
   "EDITOR_STATE": {
     "allProjectFiles": {
-      "abe54e2b-9c2f-4633-a27b-8d42642d3f16": {
-        "id": "abe54e2b-9c2f-4633-a27b-8d42642d3f16",
+      "9481f325-4ac7-40a7-8ccf-2fc41dd11637": {
+        "id": "9481f325-4ac7-40a7-8ccf-2fc41dd11637",
         "parent": null,
         "name": "MyFirstProject.js",
         "type": "JS_LAMBDA",
@@ -11,26 +11,22 @@
         "isRemovable": true,
         "filePath": "MyFirstProject.js",
         "cursor": {
-          "lineNumber": 2,
-          "column": 5
+          "lineNumber": 1,
+          "column": 1
         },
         "config": {
           "runtime": "nodejs10.x",
           "handler": "handler",
           "timeout": 60,
           "memory": 128,
-          "layers": []
+          "layers": [],
+          "name": "MyFirstProject"
         },
-        "triggers": [
-          {
-            "resourceName": "apigusEast1oshadeeapiuomindunilqatstany",
-            "config": {}
-          }
-        ],
+        "triggers": [],
         "testCases": {
-          "3f052647-4992-4950-8c0d-d6d2d5484726": {
-            "id": "3f052647-4992-4950-8c0d-d6d2d5484726",
-            "functionId": "abe54e2b-9c2f-4633-a27b-8d42642d3f16",
+          "33fb16f4-3967-47da-be79-bccccad524b9": {
+            "id": "33fb16f4-3967-47da-be79-bccccad524b9",
+            "functionId": "9481f325-4ac7-40a7-8ccf-2fc41dd11637",
             "name": "My First Test Case",
             "event": "{\n    \"key1\": \"value1\",\n    \"key2\": \"value2\",\n    \"key3\": \"value3\"\n}"
           }
@@ -38,37 +34,24 @@
       }
     },
     "openFiles": [
-      "abe54e2b-9c2f-4633-a27b-8d42642d3f16"
+      "9481f325-4ac7-40a7-8ccf-2fc41dd11637"
     ],
-    "currentFileId": "abe54e2b-9c2f-4633-a27b-8d42642d3f16",
+    "currentFileId": "9481f325-4ac7-40a7-8ccf-2fc41dd11637",
     "resources": {
-      "apigusEast1oshadeeapiuomindunilqatstany": {
-        "name": "apigusEast1oshadeeapiuomindunilqatstany",
-        "type": "API_GATEWAY",
+      "s3cfTemplates1oea0dbk84gyvUsWest2": {
+        "name": "s3cfTemplates1oea0dbk84gyvUsWest2",
+        "type": "S3",
         "config": {
-          "selectedRegion": "us-east-1",
-          "apiMode": 1,
-          "apiName": "oshadeeapiuom",
-          "apiId": "dcwosrt3mh",
-          "endpointType": "REGIONAL",
-          "rootResourceId": "ia1xzf4ck0",
-          "existingResources": {
-            "/": "ia1xzf4ck0",
-            "/oshii": "q9j5a1"
-          },
-          "resourceMode": 0,
-          "resourceName": "indunil/qa/tst",
-          "resourcePath": "/indunil/qa/tst",
-          "restMethod": "ANY",
-          "proxyIntegration": false,
-          "enableCORS": false,
-          "stageMode": 0,
-          "stageName": "test11",
-          "mode": 1
+          "mode": 1,
+          "bucket": {
+            "region": "us-east-1",
+            "name": "cf-templates-1oea0dbk84gyv-us-west-2"
+          }
         }
       }
     },
     "customTemplate": {
+      "overrideDefault": false,
       "dialect": null,
       "definitions": null
     },
@@ -83,7 +66,15 @@
       }
     ],
     "packageJSON": {
-      "dependencies": {}
+      "dependencies": {
+        "aws-sdk": {
+          "name": "aws-sdk",
+          "language": "nodejs",
+          "version": "2.644.0",
+          "dev": true,
+          "notRemovable": false
+        }
+      }
     }
   },
   "PROJECT_META": {
@@ -94,7 +85,7 @@
     "platform": "AWS",
     "language": "nodejs",
     "platformRegions": {},
-    "lastSave": 1584085220098
+    "lastSave": 1586409636387
   },
   "VCS_STATE": {
     "provider": "GitHub",
