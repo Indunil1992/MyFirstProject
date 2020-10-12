@@ -1,8 +1,8 @@
 {
   "EDITOR_STATE": {
     "allProjectFiles": {
-      "9481f325-4ac7-40a7-8ccf-2fc41dd11637": {
-        "id": "9481f325-4ac7-40a7-8ccf-2fc41dd11637",
+      "0e8541fb-e534-48b2-9967-a79d5545697e": {
+        "id": "0e8541fb-e534-48b2-9967-a79d5545697e",
         "parent": null,
         "name": "MyFirstProject.js",
         "type": "JS_LAMBDA",
@@ -11,8 +11,8 @@
         "isRemovable": true,
         "filePath": "MyFirstProject.js",
         "cursor": {
-          "lineNumber": 17,
-          "column": 3
+          "lineNumber": 2,
+          "column": 5
         },
         "config": {
           "runtime": "nodejs10.x",
@@ -23,10 +23,11 @@
           "name": "MyFirstProject"
         },
         "triggers": [],
+        "lastUpdated": 1602488959265,
         "testCases": {
-          "33fb16f4-3967-47da-be79-bccccad524b9": {
-            "id": "33fb16f4-3967-47da-be79-bccccad524b9",
-            "functionId": "9481f325-4ac7-40a7-8ccf-2fc41dd11637",
+          "cbcfb3bd-0510-449e-b5da-e0cc02e003c3": {
+            "id": "cbcfb3bd-0510-449e-b5da-e0cc02e003c3",
+            "functionId": "0e8541fb-e534-48b2-9967-a79d5545697e",
             "name": "My First Test Case",
             "event": "{\n    \"key1\": \"value1\",\n    \"key2\": \"value2\",\n    \"key3\": \"value3\"\n}"
           }
@@ -34,23 +35,12 @@
       }
     },
     "openFiles": [
-      "9481f325-4ac7-40a7-8ccf-2fc41dd11637"
+      "0e8541fb-e534-48b2-9967-a79d5545697e"
     ],
-    "currentFileId": "9481f325-4ac7-40a7-8ccf-2fc41dd11637",
-    "resources": {
-      "s3cfTemplates1oea0dbk84gyvUsWest2": {
-        "name": "s3cfTemplates1oea0dbk84gyvUsWest2",
-        "type": "S3",
-        "config": {
-          "mode": 1,
-          "bucket": {
-            "region": "us-east-1",
-            "name": "cf-templates-1oea0dbk84gyv-us-west-2"
-          }
-        }
-      }
-    },
+    "currentFileId": "0e8541fb-e534-48b2-9967-a79d5545697e",
+    "resources": {},
     "customTemplate": {
+      "syntax": "JSON",
       "overrideDefault": false,
       "dialect": null,
       "definitions": null
@@ -63,29 +53,14 @@
         "shouldPersist": false,
         "displayOnly": false,
         "editable": false
-      },
-      {
-        "lambdaId": "all",
-        "varKey": "var1",
-        "varValue": null,
-        "shouldPersist": false,
-        "displayOnly": false,
-        "editable": true
       }
     ],
     "packageJSON": {
-      "dependencies": {
-        "aws-sdk": {
-          "name": "aws-sdk",
-          "language": "nodejs",
-          "version": "2.644.0",
-          "dev": true,
-          "notRemovable": false
-        }
-      }
+      "dependencies": {}
     }
   },
   "PROJECT_META": {
+    "sigmaVersion": "1.4.4",
     "projectName": "MyFirstProject",
     "projectDescription": "My First Project",
     "projectVersion": "1.0.0",
@@ -93,7 +68,7 @@
     "platform": "AWS",
     "language": "nodejs",
     "platformRegions": {},
-    "lastSave": 1586409834415
+    "lastSave": 1602488967949
   },
   "VCS_STATE": {
     "provider": "GitHub",
